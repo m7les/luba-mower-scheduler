@@ -18,7 +18,7 @@ mow_main:
     action: input_datetime.set_datetime
   - action: mammotion.start_mow
     target:
-      entity_id: lawn_mower.labby
+      entity_id: lawn_mower.luba_vsdqbq84
     data:
       speed: 0.2
       ultra_wave: '1'
@@ -29,7 +29,7 @@ mow_main:
       border_mode: 0
       obstacle_laps: 0
       areas:
-      - switch.labby_area_main
+      - switch.luba_vsdqbq84_area_main
       start_progress: 0
       toward: -90
       is_mow: true
@@ -57,6 +57,6 @@ blade_maintenance_done:
     action: input_select.select_next
   - data:
       entity_id: input_number.blade_maintenance_tasktime_saved
-      value: '{{ states(''sensor.labby_task_duration'') | float(0) }}'
+      value: '{{ states(''sensor.luba_vsdqbq84_task_duration'') | float(0) }}'
     action: input_number.set_value
   mode: single
